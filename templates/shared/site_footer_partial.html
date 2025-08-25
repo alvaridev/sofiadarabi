@@ -1,0 +1,96 @@
+<!-- Footer Section -->
+{% load static %}
+<footer class="custom-footer text-center py-5">
+  <div class="container">
+    <!-- عنوان -->
+    <h2 class="footer-title">
+      <span style="color:#b07b55;">S</span>ofia
+    </h2>
+
+    <!-- توضیحات -->
+ <!-- کپی‌رایت -->
+<p class="footer-copy mt-3">
+  © وب‌سایت رسمی سوفیا دارابی
+{#  <a href="https://your-portfolio-link" target="_blank">alvari-dev</a>.#}
+</p>
+
+    <!-- فرم -->
+  </div>
+</footer>
+
+<style>
+    .footer-copy {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+  direction: rtl;        /* متن فارسی درست نمایش داده بشه */
+  text-align: center;    /* اگر بخوای وسط‌چین باشه */
+  /* text-align: right;  اگر بخوای راست‌چین باشه این خط رو فعال کن */
+  line-height: 1.6;
+}
+
+.footer-copy a {
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+.footer-copy a:hover {
+  text-decoration: underline;
+}
+
+.custom-footer {
+  position: relative;
+  background-color: #fff;
+  color: #000;
+  overflow: hidden;
+}
+
+.custom-footer::before,
+.custom-footer::after {
+  content: "";
+  position: absolute;
+  background-image: url("{% static 'images/footer-2-bg.png' %}");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* پر کردن فضای بک‌گراند */
+  opacity: 0.08;
+  top: 0;
+  bottom: 0;
+  width: 50%; /* هر کدوم نصف فوتر */
+  z-index: 0;
+}
+
+.custom-footer::before {
+  left: 0;
+}
+
+.custom-footer::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.footer-title,
+.footer-description,
+.footer-form {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-title {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.footer-description {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #555;
+}
+
+
+.footer-form {
+  position: relative;
+  z-index: 1;
+}
+</style>
